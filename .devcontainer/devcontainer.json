@@ -1,0 +1,10 @@
+{
+    "name": "Zephyr Dev Container",
+    "image": "zephyr-dev:latest",
+    "workspaceFolder": "/workdir",
+    "remoteUser": "devuser",
+    "entryPoint": ["/bin/bash"],
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workdir,type=bind"
+    ]
+}
