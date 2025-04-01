@@ -3,8 +3,7 @@
     "image": "zephyr-dev:latest",
     "workspaceFolder": "/workdir",
     "remoteUser": "devuser",
-    "entryPoint": ["/bin/bash"],
-    "mounts": [
-        "source=${localWorkspaceFolder},target=/workdir,type=bind"
-    ]
+	"mounts": [
+		"source=/home/devuser/remote-sprinkler-valve,target=/workdir,type=bind"
+	]
 }
