@@ -1,10 +1,10 @@
 {
     "name": "Zephyr Dev Container",
-    "image": "zephyr-dev:latest",
+    "image": "dbwalker/zephyr-dev:latest",
     "workspaceFolder": "/workdir",
     "remoteUser": "devuser",
 	"mounts": [
-		"source=/home/devuser/remote-sprinkler-valve,target=/workdir,type=bind"
+		"source=${workspaceDirectory},target=/workdir,type=bind"
     ],
     "customizations": {
         "vscode": {
