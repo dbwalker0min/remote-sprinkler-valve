@@ -1,11 +1,7 @@
 {
     "name": "Zephyr Dev Container",
     "image": "dbwalker/zephyr-dev:latest",
-    "workspaceFolder": "/workdir",
-    "remoteUser": "devuser",
-	"mounts": [
-		"source=${workspaceDirectory},target=/workdir,type=bind"
-    ],
+    "remoteUser": "user",
     "customizations": {
         "vscode": {
             "extensions": [
