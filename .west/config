@@ -2,3 +2,9 @@
 path = application
 file = west.yml
 
+[zephyr]
+base = zephyr
+
+[build]
+board = nucleo_wb55rg
+

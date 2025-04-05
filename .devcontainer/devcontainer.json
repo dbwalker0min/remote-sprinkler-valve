@@ -2,6 +2,13 @@
     "name": "Zephyr Dev Container",
     "image": "dbwalker/zephyr-dev:latest",
     "remoteUser": "user",
+	"mounts": [
+		"source=/tmp,target=/home/user/.sockets,type=bind",
+		"source=/home/dbwal/.gitconfig,target=/home/user/.gitconfig,type=bind"
+	],
+	"remoteEnv": {
+		"SSH_AUTH_SOCK": "/home/user/.sockets/ssh-agent.sock"
+	},
     "customizations": {
         "vscode": {
             "extensions": [

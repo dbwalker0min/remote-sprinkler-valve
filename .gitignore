@@ -54,3 +54,4 @@ dkms.conf
 # Zephyr west update generated directories
 modules/
 tools/
+build/
