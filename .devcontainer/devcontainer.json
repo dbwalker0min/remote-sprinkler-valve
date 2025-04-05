@@ -3,13 +3,12 @@
     "image": "dbwalker/zephyr-dev:latest",
     "remoteUser": "user",
 	"mounts": [
-		"source=/tmp,target=/home/user/.sockets,type=bind",
+		"source=${env:SSH_AUTH_SOCK},target=/home/user/.sockets/ssh-agent.sock,type=bind",
 		"source=${env:HOME}/.gitconfig,target=/home/user/.gitconfig,type=bind"
 	],
 	"remoteEnv": {
 		"SSH_AUTH_SOCK": "/home/user/.sockets/ssh-agent.sock"
 	},
-    "postStartCommand": "${localWorkspaceFolder}/.devcontainer/setup_ssh_wsl.sh",
     "customizations": {
         "vscode": {
             "extensions": [

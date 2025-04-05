@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Setup SSH agent
+export SSH_AUTH_SOCK=/tmp/ssh-agent.sock
+if [ ! -e "$SSH_AUTH_SOCK" ]; then
+    exec socat \
+        UNIX-LISTEN:${SSH_AUTH_SOCK},umask=007,fork \
+        EXEC:'npiperelay.exe -ep -s //./pipe/openssh-ssh-agent',nofork &
+fi
+
+# Start VSCode with the container
+code .
+
